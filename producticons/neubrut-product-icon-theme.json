@@ -1,0 +1,49 @@
+{
+  "fonts": [
+    {
+      "id": "neubrut-icons",
+      "src": [
+        {
+          "path": "./neubrut-icons.woff",
+          "format": "woff"
+        }
+      ],
+      "weight": "normal",
+      "style": "normal"
+    }
+  ],
+  "iconDefinitions": {
+    "explorer-view-icon": {
+      "fontCharacter": "",
+      "fontId": "neubrut-icons"
+    },
+    "search-view-icon": {
+      "fontCharacter": "",
+      "fontId": "neubrut-icons"
+    },
+    "source-control-view-icon": {
+      "fontCharacter": "",
+      "fontId": "neubrut-icons"
+    },
+    "run-view-icon": {
+      "fontCharacter": "",
+      "fontId": "neubrut-icons"
+    },
+    "extensions-view-icon": {
+      "fontCharacter": "",
+      "fontId": "neubrut-icons"
+    },
+    "test-view-icon": {
+      "fontCharacter": "",
+      "fontId": "neubrut-icons"
+    },
+    "settings-view-bar-icon": {
+      "fontCharacter": "",
+      "fontId": "neubrut-icons"
+    },
+    "accounts-view-bar-icon": {
+      "fontCharacter": "",
+      "fontId": "neubrut-icons"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "name": "neubrut",
+  "displayName": "NeuBrut",
+  "description": "Bold neo-brutalist color themes for Visual Studio Code.",
+  "version": "0.1.0",
+  "publisher": "neubrut",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "neo-brutalism",
+    "brutalist",
+    "colorful"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "NeuBrut Concrete",
+        "uiTheme": "vs-dark",
+        "path": "./themes/neubrut-concrete.json"
+      },
+      {
+        "label": "NeuBrut Hearth",
+        "uiTheme": "vs-dark",
+        "path": "./themes/neubrut-hearth.json"
+      },
+      {
+        "label": "NeuBrut Electric",
+        "uiTheme": "vs-dark",
+        "path": "./themes/neubrut-electric.json"
+      },
+      {
+        "label": "NeuBrut Paper",
+        "uiTheme": "vs",
+        "path": "./themes/neubrut-paper.json"
+      },
+      {
+        "label": "NeuBrut Mint",
+        "uiTheme": "vs",
+        "path": "./themes/neubrut-mint.json"
+      },
+      {
+        "label": "NeuBrut Lavender",
+        "uiTheme": "vs",
+        "path": "./themes/neubrut-lavender.json"
+      },
+      {
+        "label": "NeuBrut Blossom",
+        "uiTheme": "vs",
+        "path": "./themes/neubrut-blossom.json"
+      },
+      {
+        "label": "NeuBrut Daybreak",
+        "uiTheme": "vs",
+        "path": "./themes/neubrut-daybreak.json"
+      },
+      {
+        "label": "NeuBrut Midnight",
+        "uiTheme": "vs-dark",
+        "path": "./themes/neubrut-midnight.json"
+      },
+      {
+        "label": "NeuBrut Fjord",
+        "uiTheme": "vs-dark",
+        "path": "./themes/neubrut-fjord.json"
+      }
+    ],
+    "productIconThemes": [
+      {
+        "id": "neubrut-product-icons",
+        "label": "NeuBrut Icons",
+        "path": "./producticons/neubrut-product-icon-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^4.1.0"
+  },
+  "scripts": {
+    "build": "vsce package --no-dependencies --allow-missing-repository --out dist/",
+    "prebuild": "node -e \"require('fs').mkdirSync('dist',{recursive:true})\""
+  }
+}
