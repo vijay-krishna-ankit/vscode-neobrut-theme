@@ -1,0 +1,34 @@
+name: GitHub prerelease
+
+on:
+  push:
+    tags:
+      - 'v*-rc.*'
+
+permissions:
+  contents: write
+
+jobs:
+  prerelease:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Check tag and extension version
+        shell: bash
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [[ ! "$GITHUB_REF_NAME" =~ ^v[0-9]+\.[0-9]+\.[0-9]+-rc\.[0-9]+$ ]] || [[ "$GITHUB_REF_NAME" != "v${version}-rc."* ]]; then
+            echo "Tag must be v${version}-rc.N, where N is a number." >&2
+            exit 1
+          fi
+      - run: npm ci
+      - name: Package prerelease VSIX
+        run: npm run build -- --pre-release
+      - name: Create GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/*.vsix --verify-tag --prerelease --generate-notes
