@@ -1,8 +1,9 @@
 {
   "name": "neubrut",
   "displayName": "NeuBrut",
+  "icon": "icon.png",
   "description": "Bold neo-brutalist color themes for Visual Studio Code.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "builtbyvijay",
   "license": "GPL-3.0-only",
   "repository": {
