@@ -3,7 +3,7 @@
   "displayName": "NeuBrut",
   "description": "Bold neo-brutalist color themes for Visual Studio Code.",
   "version": "0.1.0",
-  "publisher": "neubrut",
+  "publisher": "builtbyvijay",
   "engines": {
     "vscode": "^1.75.0"
   },
