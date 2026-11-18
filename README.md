@@ -2,6 +2,10 @@
 
 A collection of VS Code themes inspired by neo-brutalism, with bold accents and comfortable light and dark palettes.
 
+## License
+
+Copyright © 2026 Vijay Krishna Ankit. NeuBrut is licensed under the [GNU General Public License, version 3](LICENSE).
+
 ## Pick your palette
 
 - **Concrete** — dark gray, safety yellow, hot pink, and mint.
