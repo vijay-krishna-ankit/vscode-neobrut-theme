@@ -1,19 +1,19 @@
 # NeuBrut
 
-A loud, colorful VS Code theme collection inspired by neo-brutalism: hard borders, punchy accents, and unapologetic contrast.
+A collection of VS Code themes inspired by neo-brutalism, with bold accents and comfortable light and dark palettes.
 
 ## Pick your palette
 
 - **Concrete** — dark gray, safety yellow, hot pink, and mint.
 - **Hearth** — Gruvbox-inspired charcoal, warm gold, coral, and olive.
-- **Electric** — deep violet with pink, yellow, and cyan.
-- **Paper** — warm cream, black ink, berry, and teal.
+- **Verdigris** — deep charcoal with muted teal, gold, and cyan.
+- **Paper** — warm cream, muted dark grey, soft rose, and teal.
 - **Mint** — cool mint, deep blue, violet, and forest green.
 - **Lavender** — lilac paper, purple, berry, and teal; inspired by Catppuccin Latte.
 - **Blossom** — warm blush, raspberry, violet, and teal; inspired by Rosé Pine Dawn.
 - **Daybreak** — sunlit ivory, deep cyan, violet, and green; inspired by Solarized Light.
 - **Midnight** — inky blue, electric blue, pink, and mint; inspired by Tokyo Night.
-- **Fjord** — slate, icy teal, rose, and moss; inspired by Nord.
+- **Fjord** — deep slate blue, glacier blue, soft gold, and moss; inspired by Nord.
 
 ## Try it locally
 
@@ -24,6 +24,17 @@ A loud, colorful VS Code theme collection inspired by neo-brutalism: hard border
 To build an installable VSIX, run `npm install` once, then run `npm run build`. Use **Extensions: Install from VSIX** in VS Code and select the generated file in `dist/`.
 
 VS Code themes control colors and syntax highlighting; the editor controls the shape and thickness of UI elements.
+
+### Pill-shaped editor tabs
+
+In VS Code 1.141 or later, open **Preferences: Open User Settings (JSON)** and add:
+
+```json
+"workbench.experimental.modernUI": true,
+"workbench.experimental.modernUIEditorTabStyle": "pill"
+```
+
+These settings are experimental and may change. The theme cannot enable the tab shape on its own.
 
 ## Sidebar icons
 

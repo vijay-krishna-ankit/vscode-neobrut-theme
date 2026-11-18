@@ -29,7 +29,7 @@
         "path": "./themes/neubrut-hearth.json"
       },
       {
-        "label": "NeuBrut Electric",
+        "label": "NeuBrut Verdigris",
         "uiTheme": "vs-dark",
         "path": "./themes/neubrut-electric.json"
       },
