@@ -19,7 +19,9 @@ git tag -a v0.1.3 -m "Release 0.1.3"
 git push origin v0.1.3
 ```
 
-The release workflow builds a stable VSIX and attaches it to the GitHub release. Download the VSIX from **Releases** to upload it to the VS Code Marketplace. For an existing tag, run **GitHub release** from the Actions tab and enter the tag name. The tag must match the version in the tagged commit.
+The release workflow builds a stable VSIX, attaches it to the GitHub release, and publishes that same file to the VS Code Marketplace using Trusted Publishing. For an existing tag, run **GitHub release** from the Actions tab and enter the tag name. The tag must match the version in the tagged commit. If publishing fails after the GitHub release is created, rerun the failed publishing job from the workflow run.
+
+Before the first Marketplace publish, create a Trusted Publishing policy in the Visual Studio Marketplace publisher settings for publisher `builtbyvijay`. Set the GitHub repository owner to `vijay-krishna-ankit`, repository to `vscode-neobrut-theme`, and workflow to `release.yml`; leave the environment blank. This uses GitHub's short-lived OIDC credentials, so no Marketplace PAT is required.
 
 To publish a GitHub prerelease:
 
@@ -35,5 +37,5 @@ To publish a GitHub prerelease:
 
 The tag's version must match `package.json`; the `-rc.N` suffix belongs only in the Git tag. If the workflow fails, inspect its Actions log. The workflow uses GitHub's automatically supplied token with `contents: write`; repository or organization Actions policies must allow that permission. A retry after a release has already been created requires deleting that release or using a new candidate tag.
 
-This publishes to GitHub Releases, not the VS Code Marketplace. VSIX installations do not automatically update by default. Marketplace publishing requires a separate publisher setup and authentication.
+Prereleases are published to GitHub Releases only. VSIX installations do not automatically update by default.
 
