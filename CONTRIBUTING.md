@@ -8,9 +8,18 @@
 
 To build an installable VSIX, run `npm install` once, then run `npm run build`. Use **Extensions: Install from VSIX** in VS Code and select the generated file in `dist/`. To rebuild the icon font after editing `scripts/build-product-icons.py`, install Python `fonttools` and run `python scripts/build-product-icons.py`.
 
-## GitHub builds and prereleases
+## GitHub builds and releases
 
 GitHub Actions builds a VSIX on pushes to `main`, pull requests, and manual runs. Download it from the run's **Artifacts** section. Actions must be enabled in the repository settings.
+
+To create a stable GitHub release, update the version in `package.json` and `package-lock.json`, commit and push the changes, then create and push a matching tag:
+
+```sh
+git tag -a v0.1.3 -m "Release 0.1.3"
+git push origin v0.1.3
+```
+
+The release workflow builds a stable VSIX and attaches it to the GitHub release. Download the VSIX from **Releases** to upload it to the VS Code Marketplace. For an existing tag, run **GitHub release** from the Actions tab and enter the tag name. The tag must match the version in the tagged commit.
 
 To publish a GitHub prerelease:
 
