@@ -173,7 +173,11 @@
     {
       "scope": [
         "entity.name.function",
-        "support.function"
+        "support.function",
+        "entity.name.method",
+        "support.function.builtin",
+        "variable.function",
+        "entity.name.function.call"
       ],
       "settings": {
         "foreground": "#A12E4D",
@@ -185,7 +189,12 @@
         "entity.name.type",
         "entity.name.class",
         "support.type",
-        "support.class"
+        "support.class",
+        "entity.name.namespace",
+        "support.type.primitive",
+        "entity.name.struct",
+        "entity.name.interface",
+        "entity.name.enum"
       ],
       "settings": {
         "foreground": "#006C50",
@@ -246,6 +255,38 @@
       }
     },
     {
+      "name": "Properties and fields",
+      "scope": [
+        "variable.other.property",
+        "variable.other.member",
+        "support.variable.property",
+        "meta.object-literal.key string.unquoted"
+      ],
+      "settings": {
+        "foreground": "#865000"
+      }
+    },
+    {
+      "name": "Constants and enum members",
+      "scope": [
+        "variable.other.constant",
+        "variable.other.enummember"
+      ],
+      "settings": {
+        "foreground": "#A23A24"
+      }
+    },
+    {
+      "name": "Escapes and format placeholders",
+      "scope": [
+        "constant.character.escape",
+        "constant.other.placeholder"
+      ],
+      "settings": {
+        "foreground": "#865000"
+      }
+    },
+    {
       "name": "Control flow and modifiers",
       "scope": [
         "keyword.control",
@@ -255,5 +296,30 @@
         "fontStyle": "bold italic"
       }
     }
-  ]
+  ],
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "namespace": "#006C50",
+    "type": "#006C50",
+    "class": "#006C50",
+    "interface": "#006C50",
+    "struct": "#006C50",
+    "enum": "#006C50",
+    "typeParameter": "#006C50",
+    "function": "#A12E4D",
+    "method": "#A12E4D",
+    "macro": "#A12E4D",
+    "variable": "#55635D",
+    "parameter": "#A23A24",
+    "property": "#865000",
+    "enumMember": "#A23A24",
+    "variable.readonly": "#A23A24",
+    "property.readonly": "#A23A24",
+    "keyword": "#A23A24",
+    "string": "#006C50",
+    "number": "#A23A24",
+    "event": "#865000",
+    "decorator": "#A12E4D",
+    "label": "#A23A24"
+  }
 }

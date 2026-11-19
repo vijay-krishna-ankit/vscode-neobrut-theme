@@ -1,8 +1,8 @@
 # NeuBrut
 
-A collection of VS Code themes inspired by neo-brutalism, with bold accents and a choice of light and dark palettes. NeuBrut is designed to be easy on the eyes during everyday work, with the aim of making time at the editor more comfortable.
+A collection of VS Code themes inspired by the bold colors of neo-brutalism. NeuBrut brings those colors into light and dark palettes designed to be comfortable to look at during long coding sessions.
 
-Everyone experiences color and screen comfort differently. NeuBrut is a personal exploration of which colors feel better and more comfortable to use. It has not been medically tested and is not a medical product or a treatment for eye strain, headaches, or migraines.
+Color and screen comfort are personal, so try the palettes with your usual code, screen brightness, and lighting to find what works for you.
 
 ## Get started
 
@@ -13,9 +13,9 @@ Everyone experiences color and screen comfort differently. NeuBrut is a personal
 
 ## Share your experience
 
-I'd especially welcome feedback from people who experience headaches or migraines. Does a palette feel comfortable during your usual work? Are any colors, contrasts, or highlights uncomfortable? Which palette, screen brightness, and lighting were you using?
+I'd welcome feedback on how the palettes feel during your usual work. Are any colors, contrasts, or highlights uncomfortable over time? Which palette, screen brightness, and lighting were you using?
 
-Please [open an issue](https://github.com/vijay-krishna-ankit/vscode-neobrut-theme/issues) to share what worked or suggest improvements. Share only what you're comfortable making public; medical details aren't needed.
+Please [open an issue](https://github.com/vijay-krishna-ankit/vscode-neobrut-theme/issues) to share what worked or suggest improvements.
 
 ## Pick your palette
 
@@ -82,6 +82,10 @@ Sunlit ivory, deep cyan, violet, and green; inspired by Solarized Light.
 ## Sidebar icons
 
 NeuBrut Icons follows the active color theme and covers VS Code's built-in Explorer, Search, Source Control, Run and Debug, Extensions, Testing, Accounts, and Settings icons. Extension-provided icons retain their own artwork.
+
+## Syntax highlighting
+
+Each palette colors common syntax and enables semantic highlighting for symbols such as types, methods, properties, and parameters. The exact colors visible depend on the language grammar and language extension. If code still looks mostly one color, check that VS Code has detected the correct language and that its language extension is installed and active. A user or workspace `editor.semanticHighlighting.enabled` setting can also override the theme's preference.
 
 ## Readable tab labels
 

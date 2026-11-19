@@ -146,7 +146,7 @@
         "storage.modifier"
       ],
       "settings": {
-        "foreground": "#006D65",
+        "foreground": "#7342A6",
         "fontStyle": ""
       }
     },
@@ -167,13 +167,17 @@
         "constant.character"
       ],
       "settings": {
-        "foreground": "#006D65"
+        "foreground": "#7342A6"
       }
     },
     {
       "scope": [
         "entity.name.function",
-        "support.function"
+        "support.function",
+        "entity.name.method",
+        "support.function.builtin",
+        "variable.function",
+        "entity.name.function.call"
       ],
       "settings": {
         "foreground": "#9B3357",
@@ -185,7 +189,12 @@
         "entity.name.type",
         "entity.name.class",
         "support.type",
-        "support.class"
+        "support.class",
+        "entity.name.namespace",
+        "support.type.primitive",
+        "entity.name.struct",
+        "entity.name.interface",
+        "entity.name.enum"
       ],
       "settings": {
         "foreground": "#006D65",
@@ -246,6 +255,38 @@
       }
     },
     {
+      "name": "Properties and fields",
+      "scope": [
+        "variable.other.property",
+        "variable.other.member",
+        "support.variable.property",
+        "meta.object-literal.key string.unquoted"
+      ],
+      "settings": {
+        "foreground": "#80500C"
+      }
+    },
+    {
+      "name": "Constants and enum members",
+      "scope": [
+        "variable.other.constant",
+        "variable.other.enummember"
+      ],
+      "settings": {
+        "foreground": "#7342A6"
+      }
+    },
+    {
+      "name": "Escapes and format placeholders",
+      "scope": [
+        "constant.character.escape",
+        "constant.other.placeholder"
+      ],
+      "settings": {
+        "foreground": "#80500C"
+      }
+    },
+    {
       "name": "Control flow and modifiers",
       "scope": [
         "keyword.control",
@@ -255,5 +296,30 @@
         "fontStyle": "bold italic"
       }
     }
-  ]
+  ],
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "namespace": "#006D65",
+    "type": "#006D65",
+    "class": "#006D65",
+    "interface": "#006D65",
+    "struct": "#006D65",
+    "enum": "#006D65",
+    "typeParameter": "#006D65",
+    "function": "#9B3357",
+    "method": "#9B3357",
+    "macro": "#9B3357",
+    "variable": "#645F70",
+    "parameter": "#006D65",
+    "property": "#80500C",
+    "enumMember": "#7342A6",
+    "variable.readonly": "#7342A6",
+    "property.readonly": "#7342A6",
+    "keyword": "#7342A6",
+    "string": "#006D65",
+    "number": "#7342A6",
+    "event": "#80500C",
+    "decorator": "#9B3357",
+    "label": "#7342A6"
+  }
 }

@@ -15,11 +15,12 @@
     "activityBar.inactiveForeground": "#50402A",
     "activityBar.border": "#EBDBB2",
     "activityBar.activeBorder": "#FB7771",
-    "sideBar.background": "#303638",
+    "sideBar.background": "#282828",
+    "sideBarSectionHeader.background": "#3C3836",
+    "secondarySideBar.background": "#282828",
     "sideBar.foreground": "#EBDBB2",
     "sideBar.border": "#EBDBB2",
     "sideBarTitle.foreground": "#EBDBB2",
-    "sideBarSectionHeader.background": "#3C3836",
     "sideBarSectionHeader.foreground": "#EBDBB2",
     "sideBarSectionHeader.border": "#EBDBB2",
     "editor.background": "#282828",
@@ -88,7 +89,7 @@
     "peekView.border": "#FABD2F",
     "peekViewEditor.background": "#282828",
     "peekViewResult.background": "#3C3836",
-    "peekViewTitle.background": "#303638",
+    "peekViewTitle.background": "#282828",
     "terminal.background": "#282828",
     "terminal.foreground": "#EBDBB2",
     "terminalCursor.foreground": "#FABD2F",
@@ -122,8 +123,8 @@
     "breadcrumb.focusForeground": "#B8D18C",
     "breadcrumb.activeSelectionForeground": "#B8D18C",
     "breadcrumbPicker.background": "#3C3836",
-    "modernUI.shellBackground": "#303638",
-    "modernUI.inactiveShellBackground": "#303638",
+    "modernUI.shellBackground": "#282828",
+    "modernUI.inactiveShellBackground": "#282828",
     "commandCenter.foreground": "#EBDBB2",
     "commandCenter.activeForeground": "#EBDBB2",
     "commandCenter.inactiveForeground": "#BDAE93"
@@ -173,7 +174,11 @@
     {
       "scope": [
         "entity.name.function",
-        "support.function"
+        "support.function",
+        "entity.name.method",
+        "support.function.builtin",
+        "variable.function",
+        "entity.name.function.call"
       ],
       "settings": {
         "foreground": "#FABD2F",
@@ -185,7 +190,12 @@
         "entity.name.type",
         "entity.name.class",
         "support.type",
-        "support.class"
+        "support.class",
+        "entity.name.namespace",
+        "support.type.primitive",
+        "entity.name.struct",
+        "entity.name.interface",
+        "entity.name.enum"
       ],
       "settings": {
         "foreground": "#B8D18C",
@@ -246,6 +256,38 @@
       }
     },
     {
+      "name": "Properties and fields",
+      "scope": [
+        "variable.other.property",
+        "variable.other.member",
+        "support.variable.property",
+        "meta.object-literal.key string.unquoted"
+      ],
+      "settings": {
+        "foreground": "#FABD2F"
+      }
+    },
+    {
+      "name": "Constants and enum members",
+      "scope": [
+        "variable.other.constant",
+        "variable.other.enummember"
+      ],
+      "settings": {
+        "foreground": "#FB7771"
+      }
+    },
+    {
+      "name": "Escapes and format placeholders",
+      "scope": [
+        "constant.character.escape",
+        "constant.other.placeholder"
+      ],
+      "settings": {
+        "foreground": "#FABD2F"
+      }
+    },
+    {
       "name": "Control flow and modifiers",
       "scope": [
         "keyword.control",
@@ -255,5 +297,30 @@
         "fontStyle": "bold italic"
       }
     }
-  ]
+  ],
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "namespace": "#B8D18C",
+    "type": "#B8D18C",
+    "class": "#B8D18C",
+    "interface": "#B8D18C",
+    "struct": "#B8D18C",
+    "enum": "#B8D18C",
+    "typeParameter": "#B8D18C",
+    "function": "#FABD2F",
+    "method": "#FABD2F",
+    "macro": "#FABD2F",
+    "variable": "#EBDBB2",
+    "parameter": "#FB7771",
+    "property": "#FABD2F",
+    "enumMember": "#FB7771",
+    "variable.readonly": "#FB7771",
+    "property.readonly": "#FB7771",
+    "keyword": "#FB7771",
+    "string": "#B8D18C",
+    "number": "#FB7771",
+    "event": "#FABD2F",
+    "decorator": "#FABD2F",
+    "label": "#FB7771"
+  }
 }
